@@ -11,15 +11,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 
-import captionforpictures.kayushi07.com.captionforpictures.AdInterstitial;
 import captionforpictures.kayushi07.com.captionforpictures.DetailActivity;
 import captionforpictures.kayushi07.com.captionforpictures.R;
 
 import java.util.List;
 
-import captionforpictures.kayushi07.com.captionforpictures.R;
 import captionforpictures.kayushi07.com.captionforpictures.adapter.SingleListAdapter;
 import captionforpictures.kayushi07.com.captionforpictures.model.Single;
 import captionforpictures.kayushi07.com.captionforpictures.widgets.GridMarginDecoration;
@@ -32,7 +33,6 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
     private RecyclerView lvSingle;
     private GridLayoutManager gridLayoutManager;
     private SingleListAdapter singleListAdapter;
-
     private Context context;
 
     public static FragmentSingle newInstance() {
@@ -52,15 +52,17 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
 
         lvSingle = (RecyclerView) rootView.findViewById(R.id.lvSingle);
 
+
         return rootView;
     }
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         singleListAdapter = new SingleListAdapter(this);
-        gridLayoutManager = new GridLayoutManager(context, 2);
+        gridLayoutManager = new GridLayoutManager(context, 1);
 
         lvSingle.setLayoutManager(gridLayoutManager);
         lvSingle.addItemDecoration(new GridMarginDecoration(context, 2, 2, 2, 2));
@@ -74,21 +76,27 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
         Single single;
 
         int img[] = {R.drawable.funny, R.drawable.love,
-                R.drawable.flirty, R.drawable.cool,
+                R.drawable.nature, R.drawable.cool,
                 R.drawable.selfie, R.drawable.clever,
                 R.drawable.success, R.drawable.cute,
                 R.drawable.song, R.drawable.best_frd,
                 R.drawable.me, R.drawable.savage,
-                R.drawable.good};
+                R.drawable.good, R.drawable.attitude,
+                R.drawable.flirty, R.drawable.sad,
+                R.drawable.dp, R.drawable.summer,
+                R.drawable.beach};
 
         String title[] = {
                 "FUNNY Captions", "LOVE Captions",
-                "FLIRTY Captions", "COOL Captions",
+                "NATURE Captions", "COOL Captions",
                 "SELFIE Captions", "CLEVER Captions",
                 "SUCCESS Captions", "CUTE Captions",
                 "SONG LYRICS Captions",
                 "BEST FRIEND Captions", "ME and MYSELF Captions",
-                "SAVAGE Captions", "GOOD Captions"
+                "SAVAGE Captions", "GOOD Captions", "ATTITUDE Captions",
+                "FLIRTY Captions", "SAD Captions",
+                "PROFILE PICTURE Captions", "SUMMER Captions",
+                "BEACH Captions"
         };
 
         for (int i = 0; i < img.length; i++) {
@@ -106,12 +114,8 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
     @Override
     public void onGridItemClick(View v, int position) {
 
-        Intent i = new Intent(context, AdInterstitial.class);
-        context.startActivity(i);
-
         Intent intent = new Intent(context, DetailActivity.class);
         intent.putExtra("id", position);
         startActivity(intent);
-//        Toast.makeText(context, " "+position, Toast.LENGTH_SHORT).show();
 }
 }
