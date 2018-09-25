@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:padding="3dp"
+        android:focusable="false"
+        android:background="@android:color/white"
+        android:focusableInTouchMode="false"
+        android:drawableStart="@android:drawable/ic_search_category_default"
+        android:drawableLeft="@android:drawable/ic_search_category_default"
+        android:id="@+id/search">
+
+    </EditText>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/lvSingle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical"
         android:padding="3dp"
         android:paddingBottom="60dp"/>
 
-</RelativeLayout>
+</LinearLayout>

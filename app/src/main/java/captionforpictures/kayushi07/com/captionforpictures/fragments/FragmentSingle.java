@@ -10,13 +10,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import captionforpictures.kayushi07.com.captionforpictures.DetailActivity;
+import captionforpictures.kayushi07.com.captionforpictures.Activity.DetailActivity;
+import captionforpictures.kayushi07.com.captionforpictures.Activity.SearchActivity;
 import captionforpictures.kayushi07.com.captionforpictures.R;
 
 import java.util.List;
@@ -31,6 +31,7 @@ import captionforpictures.kayushi07.com.captionforpictures.widgets.GridMarginDec
 public class FragmentSingle extends Fragment implements SingleListAdapter.OnGridItemSelectedListener {
 
     private RecyclerView lvSingle;
+    EditText search;
     private GridLayoutManager gridLayoutManager;
     private SingleListAdapter singleListAdapter;
     private Context context;
@@ -51,7 +52,14 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
         View rootView = inflater.inflate(R.layout.fragment_single, container, false);
 
         lvSingle = (RecyclerView) rootView.findViewById(R.id.lvSingle);
-
+        search = (EditText) rootView.findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+        Intent i = new Intent(context, SearchActivity.class);
+        startActivity(i);
+            }
+        });
 
         return rootView;
     }

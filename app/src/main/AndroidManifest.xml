@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/icon_small"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".Activity.MainActivity"
             android:label="@string/app_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".Activity.DetailActivity"></activity>
+        <activity android:name=".Activity.SearchActivity"></activity>
 
 
         <meta-data

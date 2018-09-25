@@ -1,8 +1,10 @@
-package captionforpictures.kayushi07.com.captionforpictures;
+package captionforpictures.kayushi07.com.captionforpictures.Activity;
 
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatDialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
