@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,9 +14,14 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 import java.util.ArrayList;
 
 import captionforpictures.kayushi07.com.captionforpictures.Activity.DetailActivity;
+import captionforpictures.kayushi07.com.captionforpictures.Activity.MainActivity;
 import captionforpictures.kayushi07.com.captionforpictures.Activity.SearchActivity;
 import captionforpictures.kayushi07.com.captionforpictures.R;
 
@@ -25,16 +31,17 @@ import captionforpictures.kayushi07.com.captionforpictures.adapter.SingleListAda
 import captionforpictures.kayushi07.com.captionforpictures.model.Single;
 import captionforpictures.kayushi07.com.captionforpictures.widgets.GridMarginDecoration;
 
-/**
- * Created by docotel on 4/14/16.
- */
+
 public class FragmentSingle extends Fragment implements SingleListAdapter.OnGridItemSelectedListener {
 
     private RecyclerView lvSingle;
-    EditText search;
+//    EditText search;
+    FloatingActionButton fab;
     private GridLayoutManager gridLayoutManager;
     private SingleListAdapter singleListAdapter;
     private Context context;
+    InterstitialAd interstitialAd;
+
 
     public static FragmentSingle newInstance() {
         return new FragmentSingle();
@@ -52,14 +59,22 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
         View rootView = inflater.inflate(R.layout.fragment_single, container, false);
 
         lvSingle = (RecyclerView) rootView.findViewById(R.id.lvSingle);
-        search = (EditText) rootView.findViewById(R.id.search);
-        search.setOnClickListener(new View.OnClickListener() {
+        fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
         Intent i = new Intent(context, SearchActivity.class);
         startActivity(i);
             }
         });
+
+        try{
+            createNewIntAd();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
         return rootView;
     }
@@ -122,8 +137,39 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
     @Override
     public void onGridItemClick(View v, int position) {
 
-        Intent intent = new Intent(context, DetailActivity.class);
-        intent.putExtra("id", position);
-        startActivity(intent);
+        final int save_position = position;
+
+        if (interstitialAd.isLoaded()) {
+            interstitialAd.show();
+
+            interstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdClosed() {
+                    Intent intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("id", save_position);
+                    startActivity(intent);
+
+                    // Load the next interstitial.
+                    interstitialAd.loadAd(new AdRequest.Builder().build());
+                }
+
+            });
+        }
+        else {
+
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra("id", position);
+            startActivity(intent);
+        }
+
 }
+
+    private void createNewIntAd() {
+        interstitialAd = new InterstitialAd(context);
+        // set the adUnitId (defined in values/strings.xml)
+        interstitialAd.setAdUnitId(getString(R.string.inter_add));
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        interstitialAd.loadAd(adRequest);
+    }
 }

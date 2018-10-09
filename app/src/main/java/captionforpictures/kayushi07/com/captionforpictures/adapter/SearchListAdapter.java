@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 import captionforpictures.kayushi07.com.captionforpictures.databinding.*;
@@ -52,9 +54,20 @@ public class SearchListAdapter extends BaseAdapter implements Filterable {
             inflater = (LayoutInflater) parent.getContext()
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
-        RowItemSearchBinding rowItemBinding = DataBindingUtil.inflate(inflater, R.layout.row_item_search, parent, false);
+        final RowItemSearchBinding rowItemBinding = DataBindingUtil.inflate(inflater, R.layout.row_item_search, parent, false);
         rowItemBinding.stringName.setText(mData.get(position));
+        rowItemBinding.stringName.setOnLongClickListener(new View.OnLongClickListener(){
 
+            @Override
+            public boolean onLongClick(View view) {
+
+                android.content.ClipboardManager clipboard = (android.content.ClipboardManager) parent.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", rowItemBinding.stringName.getText().toString());
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(parent.getContext(), " COPIED to clipboard!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
 
         return rowItemBinding.getRoot();
     }
@@ -81,7 +94,8 @@ public class SearchListAdapter extends BaseAdapter implements Filterable {
                 }
                 results.count = filterList.size();
                 results.values = filterList;
-            } else {
+            }
+            else {
                 results.count = mStringFilterList.size();
                 results.values = mStringFilterList;
             }

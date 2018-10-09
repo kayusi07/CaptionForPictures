@@ -3,4 +3,5 @@
     <string name="app_title">Photo Captions</string>
     <string name="banner_add">ca-app-pub-5152778234781012/7672612686</string>
     <string name="inter_add">ca-app-pub-5152778234781012/4579545481</string>
+    <string name="copy">Copy</string>
 </resources>

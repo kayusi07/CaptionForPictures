@@ -20,7 +20,7 @@
             android:textStyle="bold"
             android:textColor="#0000ff"
             android:textAlignment="center"
-            android:gravity="center"/>
+            android:gravity="left"/>
 
 
 </LinearLayout>

@@ -13,9 +13,7 @@ import java.util.List;
 import captionforpictures.kayushi07.com.captionforpictures.R;
 import captionforpictures.kayushi07.com.captionforpictures.model.Single;
 
-/**
- * Created by wim on 4/14/16.
- */
+
 public class SingleListAdapter extends RecyclerView.Adapter<SingleListAdapter.SingleViewHolder>{
 
     private List<Single> singleList;

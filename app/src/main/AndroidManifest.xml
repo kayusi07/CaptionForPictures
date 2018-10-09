@@ -19,7 +19,8 @@
         </activity>
 
         <activity android:name=".Activity.DetailActivity"></activity>
-        <activity android:name=".Activity.SearchActivity"></activity>
+        <activity android:name=".Activity.SearchActivity"
+            android:label="Search Caption"></activity>
 
 
         <meta-data
