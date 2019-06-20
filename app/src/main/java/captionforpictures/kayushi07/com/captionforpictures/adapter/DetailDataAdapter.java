@@ -20,7 +20,6 @@ import captionforpictures.kayushi07.com.captionforpictures.model.DetailData;
 
 public class DetailDataAdapter extends RecyclerView.Adapter<DetailDataAdapter.ViewHolder> {
     private DetailData[] detailData;
-
     Activity activity;
 
     public DetailDataAdapter(DetailData[] detailData, Activity activity) {
@@ -32,8 +31,9 @@ public class DetailDataAdapter extends RecyclerView.Adapter<DetailDataAdapter.Vi
     public DetailDataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         //Inflate the layout, initialize the View Holder
 
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.design_row_main, viewGroup, false);
-        return new ViewHolder(view);
+            View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.design_row_main, viewGroup, false);
+            return new ViewHolder(view);
+
     }
 
     @Override
@@ -46,6 +46,7 @@ public class DetailDataAdapter extends RecyclerView.Adapter<DetailDataAdapter.Vi
 
     @Override
     public int getItemCount() {
+
         return detailData.length;
     }
 

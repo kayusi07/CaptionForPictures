@@ -85,7 +85,7 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
         super.onActivityCreated(savedInstanceState);
 
         singleListAdapter = new SingleListAdapter(this);
-        gridLayoutManager = new GridLayoutManager(context, 1);
+        gridLayoutManager = new GridLayoutManager(context, 2);
 
         lvSingle.setLayoutManager(gridLayoutManager);
         lvSingle.addItemDecoration(new GridMarginDecoration(context, 2, 2, 2, 2));
@@ -107,19 +107,29 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
                 R.drawable.good, R.drawable.attitude,
                 R.drawable.flirty, R.drawable.sad,
                 R.drawable.dp, R.drawable.summer,
-                R.drawable.beach};
+                R.drawable.beach,
+                R.drawable.business, R.drawable.cousin,
+                R.drawable.family, R.drawable.group,
+                R.drawable.inspiration, R.drawable.kids,
+                R.drawable.party, R.drawable.romantic,
+                R.drawable.sarcasm, R.drawable.sassy,
+                R.drawable.single
+        };
 
         String title[] = {
-                "FUNNY Captions", "LOVE Captions",
-                "NATURE Captions", "COOL Captions",
-                "SELFIE Captions", "CLEVER Captions",
-                "SUCCESS Captions", "CUTE Captions",
-                "SONG LYRICS Captions",
-                "BEST FRIEND Captions", "ME and MYSELF Captions",
-                "SAVAGE Captions", "GOOD Captions", "ATTITUDE Captions",
-                "FLIRTY Captions", "SAD Captions",
-                "PROFILE PICTURE Captions", "SUMMER Captions",
-                "BEACH Captions"
+                "Funny", "Love",
+                "Nature", "Cool",
+                "Selfie", "Clever",
+                "Success", "Cute",
+                "Song Lyrics",
+                "Best Friend", "Me And Myself",
+                "Savage", "Good", "Attitude",
+                "Flirty", "Sad",
+                "Profile Picture", "Summer",
+                "Beach", "Business", "Cousins",
+                "Family", "Group Photo", "Inspirational",
+                "Kids", "Party", "Romantic",
+                "Sarcasm", "Sassy", "Single"
         };
 
         for (int i = 0; i < img.length; i++) {
