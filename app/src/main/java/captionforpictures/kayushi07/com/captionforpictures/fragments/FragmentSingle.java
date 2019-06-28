@@ -3,26 +3,24 @@ package captionforpictures.kayushi07.com.captionforpictures.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-import captionforpictures.kayushi07.com.captionforpictures.Activity.DetailActivity;
-import captionforpictures.kayushi07.com.captionforpictures.Activity.MainActivity;
-import captionforpictures.kayushi07.com.captionforpictures.Activity.SearchActivity;
+import captionforpictures.kayushi07.com.captionforpictures.activity.DetailActivity;
+import captionforpictures.kayushi07.com.captionforpictures.activity.SearchActivity;
 import captionforpictures.kayushi07.com.captionforpictures.R;
 
 import java.util.List;

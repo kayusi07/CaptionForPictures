@@ -1,7 +1,8 @@
+//noinspection GradleCompatible
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     dataBinding {
         enabled = true
@@ -10,10 +11,10 @@ android {
     defaultConfig {
         applicationId "captionforpictures.kayushi07.com.captionforpictures"
         minSdkVersion 14
-        targetSdkVersion 28
-        versionCode 7
-        versionName "5.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        targetSdkVersion 29
+        versionCode 8
+        versionName "6.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -25,14 +26,14 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.google.android.gms:play-services-ads:15.0.1'
-    implementation 'com.android.support:appcompat-v7:28.+'
-    implementation 'com.android.support:cardview-v7:28.+'
-    implementation 'com.android.support:recyclerview-v7:28.+'
-    implementation 'com.android.support:design:28.+'
+    implementation 'com.google.android.gms:play-services-ads:18.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
     testImplementation 'junit:junit:4.12'
 
 

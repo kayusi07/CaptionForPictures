@@ -1,9 +1,6 @@
 package captionforpictures.kayushi07.com.captionforpictures.adapter;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-
-import android.databinding.*;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.Toast;
+
+import androidx.databinding.DataBindingUtil;
+
 
 import java.util.ArrayList;
 import java.util.List;

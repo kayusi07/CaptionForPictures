@@ -1,13 +1,9 @@
-package captionforpictures.kayushi07.com.captionforpictures.Activity;
+package captionforpictures.kayushi07.com.captionforpictures.activity;
 
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatDialogFragment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.os.Bundle;
-import android.widget.EditText;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import captionforpictures.kayushi07.com.captionforpictures.R;
 import captionforpictures.kayushi07.com.captionforpictures.fragments.FragmentSingle;

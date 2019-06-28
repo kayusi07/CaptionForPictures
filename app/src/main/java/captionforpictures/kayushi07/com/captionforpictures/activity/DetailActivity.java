@@ -1,16 +1,14 @@
-package captionforpictures.kayushi07.com.captionforpictures.Activity;
+package captionforpictures.kayushi07.com.captionforpictures.activity;
 
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdListener;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 
 import captionforpictures.kayushi07.com.captionforpictures.R;
 import captionforpictures.kayushi07.com.captionforpictures.adapter.DetailDataAdapter;
@@ -21,7 +19,7 @@ import captionforpictures.kayushi07.com.captionforpictures.model.DetailData;
  * Created by Ayushi on 11-07-2017.
  */
 
-public class DetailActivity extends AppCompatActivity{
+public class DetailActivity extends AppCompatActivity {
 
     private DetailDataAdapter adapter;
     private RecyclerView recyclerView;

@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/icon_small"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity"
+        <activity android:name=".activity.MainActivity"
             android:label="@string/app_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,14 +18,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity.DetailActivity"></activity>
-        <activity android:name=".Activity.SearchActivity"
+        <activity android:name=".activity.DetailActivity"></activity>
+        <activity android:name=".activity.SearchActivity"
             android:label="Search Caption"></activity>
 
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5152778234781012~4719146280"/>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
