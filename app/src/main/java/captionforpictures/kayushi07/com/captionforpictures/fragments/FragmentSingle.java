@@ -96,38 +96,47 @@ public class FragmentSingle extends Fragment implements SingleListAdapter.OnGrid
         List<Single> singleList = new ArrayList<>();
         Single single;
 
-        int img[] = {R.drawable.funny, R.drawable.love,
-                R.drawable.nature, R.drawable.cool,
-                R.drawable.selfie, R.drawable.clever,
-                R.drawable.success, R.drawable.cute,
-                R.drawable.song, R.drawable.best_frd,
-                R.drawable.me, R.drawable.savage,
-                R.drawable.good, R.drawable.attitude,
-                R.drawable.flirty, R.drawable.sad,
-                R.drawable.dp, R.drawable.summer,
-                R.drawable.beach,
-                R.drawable.business, R.drawable.cousin,
-                R.drawable.family, R.drawable.group,
-                R.drawable.inspiration, R.drawable.kids,
-                R.drawable.party, R.drawable.romantic,
-                R.drawable.sarcasm, R.drawable.sassy,
-                R.drawable.single
+        int img[] = {R.drawable.sd, R.drawable.quarantine,
+                R.drawable.nature, R.drawable.travel,
+                R.drawable.dp, R.drawable.me,
+                R.drawable.romantic, R.drawable.flirty,
+                R.drawable.food, R.drawable.fitness,
+                R.drawable.savage, R.drawable.good,
+                R.drawable.song, R.drawable.sad,
+                R.drawable.selfie, R.drawable.group,
+                R.drawable.summer, R.drawable.beach,
+                R.drawable.sarcasm,
+                R.drawable.attitude, R.drawable.sassy,
+                R.drawable.funny, R.drawable.party,
+                R.drawable.birthday, R.drawable.love,
+                R.drawable.single, R.drawable.best_frd,
+                R.drawable.cousin, R.drawable.family,
+                R.drawable.kids, R.drawable.cute, R.drawable.cool,
+                R.drawable.success, R.drawable.inspiration,
+                R.drawable.business,  R.drawable.clever
+                //, R.drawable.pet
         };
 
         String title[] = {
-                "Funny", "Love",
-                "Nature", "Cool",
-                "Selfie", "Clever",
-                "Success", "Cute",
-                "Song Lyrics",
-                "Best Friend", "Me And Myself",
-                "Savage", "Good", "Attitude",
-                "Flirty", "Sad",
-                "Profile Picture", "Summer",
-                "Beach", "Business", "Cousins",
-                "Family", "Group Photo", "Inspirational",
-                "Kids", "Party", "Romantic",
-                "Sarcasm", "Sassy", "Single"
+                "Social Distancing", "Quarantine",
+                "Nature", "Travel",
+                "Profile Picture", "Me And Myself",
+                "Romantic", "Flirty",
+                "Food", "Fitness",
+                "Savage", "Good",
+                "Song Lyrics", "Sad",
+                "Selfie", "Group Photo",
+                "Summer", "Beach",
+                "Sarcasm", "Attitude",
+                "Sassy", "Funny",
+                "Party", "Birthday",
+                "Love", "Single",
+                "Best Friend", "Cousins",
+                "Family", "Kids",
+                "Cute", "Cool",
+                "Success", "Inspirational",
+                "Business", "Clever"//,
+                //"Pets"
         };
 
         for (int i = 0; i < img.length; i++) {

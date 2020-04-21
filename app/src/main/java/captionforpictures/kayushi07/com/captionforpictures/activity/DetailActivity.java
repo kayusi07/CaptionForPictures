@@ -48,15 +48,15 @@ public class DetailActivity extends AppCompatActivity {
         switch(id)
         {
             case 0:{
-                setTitle("FUNNY Captions");
-                DetailData detailData[] = CaptionData.detailDataFunny;
+                setTitle("SOCIAL DISTANCING Captions");
+                DetailData detailData[] = CaptionData.detailSocialDistancing;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
             case 1:{
-                setTitle("LOVE Captions");
-                DetailData detailData[] = CaptionData.detailDataLove;
+                setTitle("QUARANTINE Captions");
+                DetailData detailData[] = CaptionData.detailQuarantine;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
@@ -69,69 +69,62 @@ public class DetailActivity extends AppCompatActivity {
                 break;
                 }
             case 3:{
-                setTitle("COOL Captions");
-                DetailData detailData[] = CaptionData.detailDataCool;
+                setTitle("TRAVEL Captions");
+                DetailData detailData[] = CaptionData.detailTravel;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
             case 4:{
-                setTitle("SELFIE Captions");
-                DetailData detailData[] = CaptionData.detailDataSelfie;
+                setTitle("PROFILE PICTURE Captions");
+                DetailData detailData[] = CaptionData.detailDataProfilePicture;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
             case 5:{
-                setTitle("CLEVER Captions");
-                DetailData detailData[] = CaptionData.detailDataClever;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 6:{
-                setTitle("SUCCESS Captions");
-                DetailData detailData[] = CaptionData.detailDataSuccess;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 7:{
-                setTitle("CUTE Captions");
-                DetailData detailData[] = CaptionData.detailDataCute;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 8:{
-                setTitle("SONG LYRICS Captions");
-                DetailData detailData[] = CaptionData.detailDataSongLyrics;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 9:{
-                setTitle("BEST FRIEND Captions");
-                DetailData detailData[] = CaptionData.detailDataBestFriend;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 10:{
                 setTitle("ME and MYSELF Captions");
                 DetailData detailData[] = CaptionData.detailDataMeMyself;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 11:{
+            case 6:{
+                setTitle("ROMANTIC Captions");
+                DetailData detailData[] = CaptionData.detailDataRomantic;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 7:{
+                setTitle("FLIRTY Captions");
+                DetailData detailData[] = CaptionData.detailDataFlirty;
+                adapter =  new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 8:{
+                setTitle("FOOD Captions");
+                DetailData detailData[] = CaptionData.detailFood;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 9:{
+                setTitle("FITNESS Captions");
+                DetailData detailData[] = CaptionData.detailFitness;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 10:{
                 setTitle("SAVAGE Captions");
                 DetailData detailData[] = CaptionData.detailDataSavage;
                 adapter =  new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 12:{
+            case 11:{
                 setTitle("GOOD Captions");
                 DetailData detailData[] = CaptionData.detailDataGood;
                 adapter =  new DetailDataAdapter(detailData, this);
@@ -139,125 +132,181 @@ public class DetailActivity extends AppCompatActivity {
                 break;
 
             }
+            case 12:{
+                setTitle("SONG LYRICS Captions");
+                DetailData detailData[] = CaptionData.detailDataSongLyrics;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
             case 13:{
-                setTitle("ATTITUDE Captions");
-                DetailData detailData[] = CaptionData.detailDataAttitude;
-                adapter =  new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 14:{
-                setTitle("FLIRTY Captions");
-                DetailData detailData[] = CaptionData.detailDataFlirty;
-                adapter =  new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 15:{
                 setTitle("SAD Captions");
                 DetailData detailData[] = CaptionData.detailDataSad;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 16:{
-                setTitle("PROFILE PICTURE Captions");
-                DetailData detailData[] = CaptionData.detailDataProfilePicture;
+            case 14:{
+                setTitle("SELFIE Captions");
+                DetailData detailData[] = CaptionData.detailDataSelfie;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 17:{
-                setTitle("SUMMER Captions");
-                DetailData detailData[] = CaptionData.detailDataSummer;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 18:{
-                setTitle("BEACH Captions");
-                DetailData detailData[] = CaptionData.detailDataBeach;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 19:{
-                setTitle("BUSINESS Captions");
-                DetailData detailData[] = CaptionData.detailDataBusiness;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 20:{
-                setTitle("COUSINS Captions");
-                DetailData detailData[] = CaptionData.detailDataCousins;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 21:{
-                setTitle("FAMILY Captions");
-                DetailData detailData[] = CaptionData.detailDataFamily;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 22:{
+            case 15:{
                 setTitle("GROUP PHOTO Captions");
                 DetailData detailData[] = CaptionData.detailDataGroupPhoto;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 23:{
-                setTitle("INSPIRATIONAL Captions");
-                DetailData detailData[] = CaptionData.detailDataInspirational;
+            case 16:{
+                setTitle("SUMMER Captions");
+                DetailData detailData[] = CaptionData.detailDataSummer;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 24:{
-                setTitle("KIDS Captions");
-                DetailData detailData[] = CaptionData.detailDataKids;
+            case 17:{
+                setTitle("BEACH Captions");
+                DetailData detailData[] = CaptionData.detailDataBeach;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 25:{
-                setTitle("PARTY Captions");
-                DetailData detailData[] = CaptionData.detailDataParty;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 26:{
-                setTitle("ROMANTIC Captions");
-                DetailData detailData[] = CaptionData.detailDataRomantic;
-                adapter = new DetailDataAdapter(detailData, this);
-                recyclerView.setAdapter(adapter);
-                break;
-            }
-            case 27:{
+            case 18:{
                 setTitle("SARCASM Captions");
                 DetailData detailData[] = CaptionData.detailDataSarcasm;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 28:{
+            case 19:{
+                setTitle("ATTITUDE Captions");
+                DetailData detailData[] = CaptionData.detailDataAttitude;
+                adapter =  new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 20:{
                 setTitle("SASSY Captions");
                 DetailData detailData[] = CaptionData.detailDataSassy;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
-            case 29:{
+            case 21:{
+                setTitle("FUNNY Captions");
+                DetailData detailData[] = CaptionData.detailDataFunny;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 22:{
+                setTitle("PARTY Captions");
+                DetailData detailData[] = CaptionData.detailDataParty;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 23:{
+                setTitle("BIRTHDAY Captions");
+                DetailData detailData[] = CaptionData.detailBirthday;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 24:{
+                setTitle("LOVE Captions");
+                DetailData detailData[] = CaptionData.detailDataLove;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 25:{
                 setTitle("SINGLE Captions");
                 DetailData detailData[] = CaptionData.detailDataSingle;
                 adapter = new DetailDataAdapter(detailData, this);
                 recyclerView.setAdapter(adapter);
                 break;
             }
+            case 26:{
+                setTitle("BEST FRIEND Captions");
+                DetailData detailData[] = CaptionData.detailDataBestFriend;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 27:{
+                setTitle("COUSINS Captions");
+                DetailData detailData[] = CaptionData.detailDataCousins;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 28:{
+                setTitle("FAMILY Captions");
+                DetailData detailData[] = CaptionData.detailDataFamily;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 29:{
+                setTitle("KIDS Captions");
+                DetailData detailData[] = CaptionData.detailDataKids;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 30:{
+                setTitle("CUTE Captions");
+                DetailData detailData[] = CaptionData.detailDataCute;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 31:{
+                setTitle("COOL Captions");
+                DetailData detailData[] = CaptionData.detailDataCool;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 32:{
+                setTitle("SUCCESS Captions");
+                DetailData detailData[] = CaptionData.detailDataSuccess;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 33:{
+                setTitle("INSPIRATIONAL Captions");
+                DetailData detailData[] = CaptionData.detailDataInspirational;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 34:{
+                setTitle("BUSINESS Captions");
+                DetailData detailData[] = CaptionData.detailDataBusiness;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+            case 35:{
+                setTitle("CLEVER Captions");
+                DetailData detailData[] = CaptionData.detailDataClever;
+                adapter = new DetailDataAdapter(detailData, this);
+                recyclerView.setAdapter(adapter);
+                break;
+            }
+//            case 32:{
+//                setTitle("PETS Captions");
+//                DetailData detailData[] = CaptionData.detailPets;
+//                adapter = new DetailDataAdapter(detailData, this);
+//                recyclerView.setAdapter(adapter);
+//                break;
+//            }
         }
     }
 

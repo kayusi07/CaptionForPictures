@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="40dp"
-        android:backgroundTint="#ffa0c4"
+        android:backgroundTint="#FF8A80"
         android:src="@drawable/searchth" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
